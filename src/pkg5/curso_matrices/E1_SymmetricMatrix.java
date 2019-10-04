@@ -18,12 +18,14 @@ public class E1_SymmetricMatrix {
     public static void main(String args[]) {
         Scanner input = new Scanner(System.in);
 
-        int matrix[][], nRows, nColumns, count = 0;
+        int matrix[][], nRows, nColumns, count = 0, size = 0;
         nRows = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the number of ranks: "));
         nColumns = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the number of colums: "));
 
         if (nRows != nColumns) {
             JOptionPane.showMessageDialog(null, "The matrix is ​​not symmetric");
+        } else {
+            size = nRows * nColumns;
         }
 
         matrix = new int[nRows][nColumns];
@@ -45,7 +47,7 @@ public class E1_SymmetricMatrix {
             }
         }
 
-        if (count == matrix.length+1) {
+        if (count == size) {
             JOptionPane.showMessageDialog(null, "THE MATRIX IS SYMMETRIC!!!");
         } else {
             JOptionPane.showMessageDialog(null, "THE MATRIX IS NOT SYMMETRIC :/");
