@@ -18,7 +18,7 @@ public class E1_SymmetricMatrix {
     public static void main(String args[]) {
         Scanner input = new Scanner(System.in);
 
-        int matrix[][], nRows, nColumns, count = 0, equalPositions = 9;
+        int matrix[][], nRows, nColumns, count = 0;
         nRows = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the number of ranks: "));
         nColumns = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the number of colums: "));
 
@@ -45,7 +45,7 @@ public class E1_SymmetricMatrix {
             }
         }
 
-        if (count == equalPositions) {
+        if (count == matrix.length+1) {
             JOptionPane.showMessageDialog(null, "THE MATRIX IS SYMMETRIC!!!");
         } else {
             JOptionPane.showMessageDialog(null, "THE MATRIX IS NOT SYMMETRIC :/");
