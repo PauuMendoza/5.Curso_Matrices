@@ -11,50 +11,72 @@ import javax.swing.JOptionPane;
 /**
  *
  * @author Paulina
+ * TRES EJERCICIOS DE PRACTICA PROPUESTOS POR DAVID PARA LA PRACTICA DE IMPRESION DE MATRICES
  */
 public class testMatrix {
-    public static void main(String args[]){
-        Scanner input=new Scanner(System.in);
-        
-        int matrixOne[][], matrixTWO[][] , nFilas, nColumnas;
-        
-        nFilas = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite el numero de filas: "));
-        nColumnas = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite el numero de columnas: "));
-        
-        ///LLENAR Y MOSTRAR 2*3, EJEMPLO 1, FILA-COLUMNA
-         matrixOne = new int [nFilas][nColumnas];
-        
-        /*
-        for(int indexFilas=0;indexFilas<nFilas;indexFilas++){
-            for(int indexColumnas=0;indexColumnas<nColumnas;indexColumnas++){
-                System.out.print("Matriz ["+indexFilas+"] ["+indexColumnas+"]: ");
-                matrixOne[indexFilas][indexColumnas]=input.nextInt();
+
+    public static void main(String args[]) {
+        Scanner input = new Scanner(System.in);
+
+        int matrixOne[][], matrixTWO[][], matrixTHREE[][], nRows, nColumns;
+
+        nRows = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite el numero de filas: "));
+        nColumns = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite el numero de columnas: "));
+
+        ///EJEMPLO 1, Llenar e imprimir matriz FILA-COLUMNA como normalmente se hace
+        matrixOne = new int[nRows][nColumns];
+/*
+        for (int indexRow = 0; indexRow < nRows; indexRow++) {
+            for (int indexColumn = 0; indexColumn < nColumns; indexColumn++) {
+                System.out.print("Matriz [" + indexRow + "] [" + indexColumn + "]: ");
+                matrixOne[indexRow][indexColumn] = input.nextInt();
             }
         }
-        
-        for(int row=0;row<nFilas;row++){
-            for(int col=0;col<nColumnas;col++){
-                System.out.print(matrixOne[row][col]);
+
+        System.out.println("***RESULT***");
+        for (int indexRow = 0; indexRow < nRows; indexRow++) {
+            for (int indexColumn = 0; indexColumn < nColumns; indexColumn++) {
+                System.out.print(matrixOne[indexRow][indexColumn]);
             }
             System.out.println("");
-        }*/
-        
-        matrixTWO = new int [nFilas][nColumnas];
-        
-         for(int indexFilas=0;indexFilas<nFilas;indexFilas++){
-            for(int indexColumnas=0;indexColumnas<nColumnas;indexColumnas++){
-                System.out.print("Matriz ["+indexFilas+"] ["+indexColumnas+"]: ");
-                matrixTWO[indexFilas][indexColumnas]=input.nextInt();
+        }
+*/
+        matrixTWO = new int[nRows][nColumns];//EJEMPLO 2, Llenar e imprimir matriz pero Intercabiar columna x fila
+/*
+        for (int indexRow = 0; indexRow < nRows; indexRow++) {
+            for (int indexColumn = 0; indexColumn < nColumns; indexColumn++) {
+                System.out.print("Matriz [" + indexRow + "] [" + indexColumn + "]: ");
+                matrixTWO[indexRow][indexColumn] = input.nextInt();
             }
         }
-         
-         for(int row=0;row<nFilas;row++){
-            for(int col=0;col<nColumnas;col++){
-                System.out.print(matrixTWO[col][row]);
+
+        System.out.println("***RESULT***");
+        for (int indexRow = 0; indexRow < nRows; indexRow++) {
+            for (int indexColumn = 0; indexColumn < nColumns; indexColumn++) {
+                System.out.print(matrixTWO[indexColumn][indexRow]);
             }
             System.out.println("");
-         
-         }
-        
+
+        }
+*/
+        matrixTHREE = new int[nRows][nColumns];
+/*
+        for (int indexRow = 0; indexRow < nRows; indexRow++) {
+            for (int indexColumn = 0; indexColumn < nColumns; indexColumn++) {
+                System.out.print("Matriz [" + indexRow + "] [" + indexColumn + "]: ");
+                matrixTHREE[indexRow][indexColumn] = input.nextInt();
+            }
+        }
+
+        System.out.println("***RESULT***");
+        for (int indexRow = nRows - 1; indexRow >= 0; indexRow--) {
+            for (int indexColumn = nColumns - 1; indexColumn >= 0; indexColumn--) {
+                System.out.print(matrixTHREE[indexRow][indexColumn]);
+
+            }
+            System.out.println("");
+
+        }
+*/
     }
 }
